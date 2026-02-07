@@ -1,6 +1,7 @@
 extends CharacterBody2D
+class_name Bullet
 
-@export var speed : int = 400
+var speed = 400
 var target_position
 var despawn_time = 1
 

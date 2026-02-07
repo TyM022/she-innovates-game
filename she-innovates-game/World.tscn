@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c6wfnner7b5af" path="res://world_tileset.png" id="1_2dftf"]
 [ext_resource type="Texture2D" uid="uid://bdxktfe3bpc37" path="res://Grass.png" id="2_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://caq32i8dkh62n" path="res://Player.tscn" id="3_bcbcq"]
+[ext_resource type="PackedScene" uid="uid://bgl6dfxyt3d7r" path="res://Enemy.tscn" id="4_js7pq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_js7pq"]
 texture = ExtResource("1_2dftf")
@@ -229,3 +230,15 @@ tile_set = SubResource("TileSet_p1v5b")
 
 [node name="Player" parent="." unique_id=2138940112 instance=ExtResource("3_bcbcq")]
 position = Vector2(94, 89)
+
+[node name="Enemy" parent="." unique_id=1260718948 instance=ExtResource("4_js7pq")]
+position = Vector2(50, 48)
+
+[node name="Enemy2" parent="." unique_id=1472579016 instance=ExtResource("4_js7pq")]
+position = Vector2(72, 151)
+
+[node name="Enemy3" parent="." unique_id=863833936 instance=ExtResource("4_js7pq")]
+position = Vector2(264, 83)
+
+[node name="Enemy4" parent="." unique_id=1738836727 instance=ExtResource("4_js7pq")]
+position = Vector2(222, 138)
