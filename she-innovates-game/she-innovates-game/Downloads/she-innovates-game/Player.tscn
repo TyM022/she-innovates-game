@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://be3psvmqr7cdi" path="res://Player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://dvvymx0dat61v" path="res://16x16 Run-Sheet.png" id="2_kne1u"]
-[ext_resource type="PackedScene" uid="uid://ctvwiiix13j4t" path="res://Gun.tscn" id="3_kne1u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e80uo"]
 radius = 8.0
@@ -145,5 +144,3 @@ libraries/ = SubResource("AnimationLibrary_wi0c6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2117968321]
 zoom = Vector2(3, 3)
-
-[node name="Gun" parent="." unique_id=618902475 instance=ExtResource("3_kne1u")]
