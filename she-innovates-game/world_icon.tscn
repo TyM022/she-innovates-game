@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dof7qrsogol32"]
+
+[ext_resource type="Script" uid="uid://by8w31rxrmx1w" path="res://world_icon.gd" id="1_3s47i"]
+
+[sub_resource type="Gradient" id="Gradient_brorb"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3s47i"]
+gradient = SubResource("Gradient_brorb")
+width = 64
+
+[node name="World Icon" type="Control" unique_id=224312516]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 65.0
+script = ExtResource("1_3s47i")
+
+[node name="Label" type="Label" parent="." unique_id=774802569]
+layout_mode = 0
+offset_top = -23.0
+offset_right = 40.0
+text = "Level 1"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=61079474]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 65.0
+texture = SubResource("GradientTexture1D_3s47i")
+expand_mode = 4

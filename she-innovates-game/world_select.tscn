@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://be4ihut25rc10"]
+
+[ext_resource type="PackedScene" uid="uid://dof7qrsogol32" path="res://world_icon.tscn" id="1_c5013"]
+[ext_resource type="Script" uid="uid://8iw1kext3u2t" path="res://world_select.gd" id="1_fik3s"]
+[ext_resource type="PackedScene" uid="uid://3qw1idbs4ow4" path="res://player_icon.tscn" id="2_f3ftl"]
+
+[node name="WorldSelect" type="Control" unique_id=578493423]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fik3s")
+
+[node name="World Icon" parent="." unique_id=224312516 instance=ExtResource("1_c5013")]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 335.0
+offset_right = 255.0
+offset_bottom = 400.0
+world_index = 0
+
+[node name="World Icon2" parent="." unique_id=812511203 instance=ExtResource("1_c5013")]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 268.0
+offset_right = 563.0
+offset_bottom = 333.0
+
+[node name="World Icon3" parent="." unique_id=672501050 instance=ExtResource("1_c5013")]
+layout_mode = 0
+offset_left = 864.0
+offset_top = 354.0
+offset_right = 928.0
+offset_bottom = 419.0
+world_index = 2
+
+[node name="playerIcon" parent="." unique_id=735402516 instance=ExtResource("2_f3ftl")]
+layout_mode = 0
