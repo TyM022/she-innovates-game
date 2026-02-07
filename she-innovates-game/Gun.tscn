@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ctvwiiix13j4t"]
+
+[ext_resource type="Texture2D" uid="uid://d2vwpmdaujox2" path="res://7Pistol07.png" id="1_jpqjm"]
+[ext_resource type="Script" uid="uid://c1722tpkn8yd5" path="res://Gun.gd" id="2_fry05"]
+
+[node name="Gun" type="Sprite2D" unique_id=618902475]
+texture = ExtResource("1_jpqjm")
+offset = Vector2(8, 0)
+script = ExtResource("2_fry05")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=29917340]
+position = Vector2(16, 0)
