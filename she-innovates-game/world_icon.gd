@@ -1,7 +1,7 @@
 @tool
 extends Control
 
-@export var world_index: int = 1
+@export var world_index: int = 1 
 @export var level_select_packed: PackedScene = load("res://level_select.tscn")
 @onready var level_select_scene:  LevelSelect = level_select_packed.instantiate()
 

@@ -31,6 +31,7 @@ offset_top = 299.0
 offset_right = 546.0
 offset_bottom = 364.0
 level_name = "B"
+next_scene_path = "uid://b0wrqlo0r7ohk"
 next_level_up = NodePath("../A")
 next_level_down = NodePath("../C")
 next_level_left = NodePath("../LevelIcon")
@@ -42,6 +43,7 @@ offset_top = 473.0
 offset_right = 546.0
 offset_bottom = 538.0
 level_name = "C"
+next_scene_path = "uid://b0wrqlo0r7ohk"
 next_level_up = NodePath("../B")
 next_level_left = NodePath("../LevelIcon")
 
@@ -52,6 +54,7 @@ offset_top = 96.0
 offset_right = 546.0
 offset_bottom = 161.0
 level_name = "A"
+next_scene_path = "uid://b0wrqlo0r7ohk"
 next_level_down = NodePath("../B")
 next_level_left = NodePath("../LevelIcon")
 
