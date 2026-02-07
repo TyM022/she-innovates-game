@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://caq32i8dkh62n"]
 
 [ext_resource type="Script" uid="uid://be3psvmqr7cdi" path="res://Player.gd" id="1_kpjcp"]
-[ext_resource type="Texture2D" uid="uid://dvvymx0dat61v" path="res://16x16 Run-Sheet.png" id="2_kne1u"]
+[ext_resource type="Texture2D" uid="uid://wnwkj8iqtw1f" path="res://16x16 Run-Sheet.png" id="2_kne1u"]
 [ext_resource type="PackedScene" uid="uid://ctvwiiix13j4t" path="res://Gun.tscn" id="3_kne1u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e80uo"]
