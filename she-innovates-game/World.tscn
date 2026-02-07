@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://b0wrqlo0r7ohk"]
 
-[ext_resource type="Texture2D" uid="uid://db3x2llp00wyh" path="res://world_tileset.png" id="1_2dftf"]
-[ext_resource type="Texture2D" uid="uid://be8g5eylmmb3a" path="res://Grass.png" id="2_bcbcq"]
+[ext_resource type="Texture2D" uid="uid://c6wfnner7b5af" path="res://world_tileset.png" id="1_2dftf"]
+[ext_resource type="Texture2D" uid="uid://bdxktfe3bpc37" path="res://Grass.png" id="2_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://caq32i8dkh62n" path="res://Player.tscn" id="3_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://bgl6dfxyt3d7r" path="res://Enemy.tscn" id="4_js7pq"]
 
