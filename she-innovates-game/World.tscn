@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bgl6dfxyt3d7r" path="res://Enemy.tscn" id="4_js7pq"]
 [ext_resource type="PackedScene" uid="uid://lpskcyvqepfg" path="res://Enemy2.tscn" id="5_eu7l1"]
 [ext_resource type="PackedScene" uid="uid://c82lwiu2cw5sk" path="res://Enemy3.tscn" id="6_p1v5b"]
+[ext_resource type="PackedScene" uid="uid://eymvbjovh2c0" path="res://BossSlime.tscn" id="7_wygdx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_js7pq"]
 texture = ExtResource("1_2dftf")
@@ -248,6 +249,9 @@ position = Vector2(-112, 11)
 
 [node name="Enemy3" parent="." unique_id=1475435121 instance=ExtResource("6_p1v5b")]
 position = Vector2(475, 27)
+
+[node name="BossSlime" parent="." unique_id=1157436742 instance=ExtResource("7_wygdx")]
+position = Vector2(370, 214)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1723860582]
 position = Vector2(-11, 26)
