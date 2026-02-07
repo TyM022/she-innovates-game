@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://7g5vw3fw6i0m"]
+
+[ext_resource type="Script" uid="uid://clfxjtd7hcu1y" path="res://level_select.gd" id="1_lw6ii"]
+[ext_resource type="PackedScene" uid="uid://bui1542cx7gb" path="res://level_icon.tscn" id="2_21myp"]
+[ext_resource type="PackedScene" uid="uid://3qw1idbs4ow4" path="res://player_icon.tscn" id="3_fjuyh"]
+
+[node name="LevelSelect" type="Control" unique_id=1834330937]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lw6ii")
+
+[node name="LevelIcon" parent="." unique_id=8457930 node_paths=PackedStringArray("next_level_up", "next_level_down", "next_level_right") instance=ExtResource("2_21myp")]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 299.0
+offset_right = 313.0
+offset_bottom = 364.0
+level_name = "Q1"
+next_level_up = NodePath("../A")
+next_level_down = NodePath("../C")
+next_level_right = NodePath("../B")
+
+[node name="B" parent="." unique_id=620296854 node_paths=PackedStringArray("next_level_up", "next_level_down", "next_level_left") instance=ExtResource("2_21myp")]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 299.0
+offset_right = 546.0
+offset_bottom = 364.0
+level_name = "B"
+next_level_up = NodePath("../A")
+next_level_down = NodePath("../C")
+next_level_left = NodePath("../LevelIcon")
+
+[node name="C" parent="." unique_id=1867556507 node_paths=PackedStringArray("next_level_up", "next_level_left") instance=ExtResource("2_21myp")]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 473.0
+offset_right = 546.0
+offset_bottom = 538.0
+level_name = "C"
+next_level_up = NodePath("../B")
+next_level_left = NodePath("../LevelIcon")
+
+[node name="A" parent="." unique_id=1678367899 node_paths=PackedStringArray("next_level_down", "next_level_left") instance=ExtResource("2_21myp")]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 96.0
+offset_right = 546.0
+offset_bottom = 161.0
+level_name = "A"
+next_level_down = NodePath("../B")
+next_level_left = NodePath("../LevelIcon")
+
+[node name="playerIcon" parent="." unique_id=735402516 instance=ExtResource("3_fjuyh")]
+layout_mode = 0

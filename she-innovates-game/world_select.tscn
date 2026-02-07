@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://dof7qrsogol32" path="res://world_icon.tscn" id="1_c5013"]
 [ext_resource type="Script" uid="uid://8iw1kext3u2t" path="res://world_select.gd" id="1_fik3s"]
 [ext_resource type="PackedScene" uid="uid://3qw1idbs4ow4" path="res://player_icon.tscn" id="2_f3ftl"]
+[ext_resource type="PackedScene" uid="uid://sbv16uw6kb03" path="res://Question2.tscn" id="4_ehinu"]
+[ext_resource type="PackedScene" uid="uid://7g5vw3fw6i0m" path="res://Question1.tscn" id="4_otbh0"]
+[ext_resource type="PackedScene" uid="uid://k3a1ot12lifs" path="res://Question3.tscn" id="5_d6fm2"]
 
 [node name="WorldSelect" type="Control" unique_id=578493423]
 layout_mode = 3
@@ -16,6 +19,7 @@ offset_top = 335.0
 offset_right = 255.0
 offset_bottom = 400.0
 world_index = 0
+level_select_packed = ExtResource("4_otbh0")
 
 [node name="World Icon2" parent="." unique_id=812511203 instance=ExtResource("1_c5013")]
 layout_mode = 0
@@ -23,6 +27,7 @@ offset_left = 499.0
 offset_top = 268.0
 offset_right = 563.0
 offset_bottom = 333.0
+level_select_packed = ExtResource("4_ehinu")
 
 [node name="World Icon3" parent="." unique_id=672501050 instance=ExtResource("1_c5013")]
 layout_mode = 0
@@ -31,6 +36,7 @@ offset_top = 354.0
 offset_right = 928.0
 offset_bottom = 419.0
 world_index = 2
+level_select_packed = ExtResource("5_d6fm2")
 
 [node name="playerIcon" parent="." unique_id=735402516 instance=ExtResource("2_f3ftl")]
 layout_mode = 0
