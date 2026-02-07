@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://c82lwiu2cw5sk"]
+
+[ext_resource type="Script" uid="uid://card8p6l688he" path="res://Enemy.gd" id="1_gltvr"]
+[ext_resource type="Texture2D" uid="uid://c70gjusgpwu8w" path="res://Slime3_Idle_full.png" id="2_gltvr"]
+[ext_resource type="Texture2D" uid="uid://b8k2v6rs83y7r" path="res://healthbar.png" id="3_n2sv5"]
+
+[sub_resource type="Animation" id="Animation_2hac7"]
+resource_name = "Idle"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333336),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e6d4v"]
+resource_name = "WalkLeft"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -4), Vector2(0, 4), Vector2(0, -4), Vector2(0, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_qp131"]
+resource_name = "WalkRight"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -4), Vector2(0, 4), Vector2(0, -4), Vector2(0, 4)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6do27"]
+_data = {
+&"Idle": SubResource("Animation_2hac7"),
+&"WalkLeft": SubResource("Animation_e6d4v"),
+&"WalkRight": SubResource("Animation_qp131")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e80uo"]
+radius = 10.049875
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qp131"]
+
+[node name="Enemy3" type="CharacterBody2D" unique_id=2138940112]
+script = ExtResource("1_gltvr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=270405089]
+libraries/ = SubResource("AnimationLibrary_6do27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1800678675]
+shape = SubResource("CircleShape2D_e80uo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=484650277]
+scale = Vector2(1.0714285, 1.05)
+texture = ExtResource("2_gltvr")
+hframes = 6
+vframes = 4
+frame = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1589222852]
+offset_left = -8.0
+offset_top = -10.0
+offset_right = 8.0
+offset_bottom = -6.0
+max_value = 7.0
+value = 7.0
+texture_progress = ExtResource("3_n2sv5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=470559943]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=841749752]
+shape = SubResource("CircleShape2D_qp131")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1448674765]
+path_desired_distance = 4.0
+path_max_distance = 10.0
