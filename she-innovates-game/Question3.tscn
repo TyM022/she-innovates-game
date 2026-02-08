@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dg1fbp2hagric" path="res://QuestionTileMap.tscn" id="2_k3ik1"]
 [ext_resource type="PackedScene" uid="uid://bj4i8y18k6xdw" path="res://text.tscn" id="3_gu4xb"]
 [ext_resource type="PackedScene" uid="uid://3qw1idbs4ow4" path="res://player_icon.tscn" id="3_k3ik1"]
+[ext_resource type="PackedScene" uid="uid://syxwdn41m8h6" path="res://result_3b.tscn" id="5_dc814"]
+[ext_resource type="PackedScene" uid="uid://duffgikt57rtk" path="res://result_3c.tscn" id="6_ssq1b"]
+[ext_resource type="PackedScene" uid="uid://c0xqh3tih426g" path="res://result_3a.tscn" id="7_2msau"]
 
 [node name="LevelSelect" type="Control" unique_id=1834330937]
 layout_mode = 3
@@ -85,6 +88,7 @@ offset_right = 619.0
 offset_bottom = 352.0
 level_name = "B"
 next_scene_path = "uid://b0wrqlo0r7ohk"
+level_select_packed = ExtResource("5_dc814")
 next_level_up = NodePath("../A")
 next_level_down = NodePath("../C")
 next_level_left = NodePath("../LevelIcon")
@@ -97,6 +101,7 @@ offset_right = 619.0
 offset_bottom = 499.0
 level_name = "C"
 next_scene_path = "uid://b0wrqlo0r7ohk"
+level_select_packed = ExtResource("6_ssq1b")
 next_level_up = NodePath("../B")
 next_level_left = NodePath("../LevelIcon")
 
@@ -108,6 +113,7 @@ offset_right = 619.0
 offset_bottom = 191.0
 level_name = "A"
 next_scene_path = "uid://b0wrqlo0r7ohk"
+level_select_packed = ExtResource("7_2msau")
 next_level_down = NodePath("../B")
 next_level_left = NodePath("../LevelIcon")
 

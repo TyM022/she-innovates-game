@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://5u66shmaj3vt"]
+
+[ext_resource type="PackedScene" uid="uid://bwa0nwje5io8m" path="res://result_1a.tscn" id="1_3pd6v"]
+
+[node name="Result1C" unique_id=671714437 instance=ExtResource("1_3pd6v")]
+
+[node name="Title2" parent="." index="1" unique_id=1101267950]
+text = "You chose to go to a Public Out-of-State University!"
+
+[node name="Flavor" parent="." index="2" unique_id=339571759]
+text = "A little far from home, but a little space from the family gains you independence.
+You have 20K dollars of debt to pay off and a bright future ahead!"

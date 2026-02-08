@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://duffgikt57rtk"]
+
+[ext_resource type="PackedScene" uid="uid://syxwdn41m8h6" path="res://result_3b.tscn" id="1_jrnxy"]
+
+[node name="Result3C" unique_id=671714437 instance=ExtResource("1_jrnxy")]
+
+[node name="Title2" parent="." index="1" unique_id=1101267950]
+text = "You iced your ankle!"
+
+[node name="Flavor" parent="." index="2" unique_id=339571759]
+text = "After icing it, the swelling went down, but it continued to bother you throughout
+the week. Maybe you should have gotten it looked at..."

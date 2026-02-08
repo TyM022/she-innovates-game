@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://jbx2pyvl6me"]
+
+[ext_resource type="PackedScene" uid="uid://bwa0nwje5io8m" path="res://result_1a.tscn" id="1_xv7d3"]
+
+[node name="Result2A" unique_id=671714437 instance=ExtResource("1_xv7d3")]
+
+[node name="Title2" parent="." index="1" unique_id=1101267950]
+text = "You got a job!"
+
+[node name="Flavor" parent="." index="2" unique_id=339571759]
+text = "At $15 and at least 6 hours each week, you earn at least $90 every week!
+That debt will be paid off in no time!"

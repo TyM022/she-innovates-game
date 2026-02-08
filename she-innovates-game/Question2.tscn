@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bui1542cx7gb" path="res://level_icon.tscn" id="2_266t6"]
 [ext_resource type="PackedScene" uid="uid://3qw1idbs4ow4" path="res://player_icon.tscn" id="3_0ifcx"]
 [ext_resource type="PackedScene" uid="uid://bj4i8y18k6xdw" path="res://text.tscn" id="3_teabj"]
+[ext_resource type="PackedScene" uid="uid://co5agoh4qp1jv" path="res://result_2b.tscn" id="5_c3ngn"]
+[ext_resource type="PackedScene" uid="uid://jbx2pyvl6me" path="res://result_2a.tscn" id="6_upsl4"]
 
 [node name="LevelSelect" type="Control" unique_id=1834330937]
 layout_mode = 3
@@ -76,6 +78,7 @@ offset_right = 572.0
 offset_bottom = 426.0
 level_name = "B"
 next_scene_path = "uid://b0wrqlo0r7ohk"
+level_select_packed = ExtResource("5_c3ngn")
 next_level_up = NodePath("../A")
 next_level_down = NodePath("")
 next_level_left = NodePath("../LevelIcon")
@@ -88,6 +91,7 @@ offset_right = 575.0
 offset_bottom = 222.0
 level_name = "A"
 next_scene_path = "uid://b0wrqlo0r7ohk"
+level_select_packed = ExtResource("6_upsl4")
 next_level_down = NodePath("../B")
 next_level_left = NodePath("../LevelIcon")
 

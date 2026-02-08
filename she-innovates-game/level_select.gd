@@ -23,5 +23,7 @@ func _input(event):
 		$playerIcon.global_position = current_level.global_position
 	if event.is_action_pressed("ui_accept"):
 		if current_level.next_scene_path:
-			get_tree().change_scene_to_file("res://World.tscn")
-			#Functions.load_screen_to_scene(current_level.next_scene_path)
+			get_tree().get_root().add_child(current_level.level_select_scene)
+			get_tree().current_scene = current_level.level_select_scene
+			get_tree().get_root().remove_child(self)
+	#		get_tree().change_scene_to_file("res://World.tscn")

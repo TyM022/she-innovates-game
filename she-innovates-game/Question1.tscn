@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dg1fbp2hagric" path="res://QuestionTileMap.tscn" id="2_fjuyh"]
 [ext_resource type="PackedScene" uid="uid://3qw1idbs4ow4" path="res://player_icon.tscn" id="3_fjuyh"]
 [ext_resource type="FontFile" uid="uid://4cjrjqopdjnf" path="res://BridgeParapet.ttf" id="3_wa8wm"]
+[ext_resource type="PackedScene" uid="uid://d3mamn78igiim" path="res://result_1b.tscn" id="5_s41kx"]
+[ext_resource type="PackedScene" uid="uid://5u66shmaj3vt" path="res://result_1c.tscn" id="6_77hae"]
+[ext_resource type="PackedScene" uid="uid://bwa0nwje5io8m" path="res://result_1a.tscn" id="7_xnhbg"]
 
 [node name="LevelSelect" type="Control" unique_id=1834330937]
 layout_mode = 3
@@ -106,7 +109,8 @@ offset_top = 304.0
 offset_right = 708.0
 offset_bottom = 369.0
 level_name = "B"
-next_scene_path = "uid://b0wrqlo0r7ohk"
+next_scene_path = "uid://d3mamn78igiim"
+level_select_packed = ExtResource("5_s41kx")
 next_level_up = NodePath("../A")
 next_level_down = NodePath("../C")
 next_level_left = NodePath("../LevelIcon")
@@ -118,7 +122,8 @@ offset_top = 463.0
 offset_right = 705.0
 offset_bottom = 528.0
 level_name = "C"
-next_scene_path = "uid://b0wrqlo0r7ohk"
+next_scene_path = "uid://5u66shmaj3vt"
+level_select_packed = ExtResource("6_77hae")
 next_level_up = NodePath("../B")
 next_level_left = NodePath("../LevelIcon")
 
@@ -129,7 +134,8 @@ offset_top = 137.0
 offset_right = 703.0
 offset_bottom = 202.0
 level_name = "A"
-next_scene_path = "uid://b0wrqlo0r7ohk"
+next_scene_path = "uid://bwa0nwje5io8m"
+level_select_packed = ExtResource("7_xnhbg")
 next_level_down = NodePath("../B")
 next_level_left = NodePath("../LevelIcon")
 
