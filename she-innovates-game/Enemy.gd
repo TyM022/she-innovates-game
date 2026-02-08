@@ -10,6 +10,10 @@ extends CharacterBody2D
 @export var next_path_position : Vector2
 @export var new_velocity : Vector2
 
+## for progress bar
+#@export var hitCount: int
+#signal moneySpent
+
 func _ready() -> void:
 	connect_signals()
 	update_animation()
@@ -50,6 +54,8 @@ func connect_signals() -> void:
 func decrease_life_points(body : Node2D) -> void:
 	if body is Bullet:
 		texture_progress_bar.value -= 1
+		#hitCount += 1
+		#moneySpent.emit()
 		body.queue_free()
 
 func healthbar_changed(value : float) -> void:

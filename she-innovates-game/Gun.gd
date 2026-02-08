@@ -3,6 +3,10 @@ extends Sprite2D
 @onready var marker_2d: Marker2D = $Marker2D
 const BULLET = preload("res://Bullet.tscn")
 
+# for progress bar
+signal shotFired
+@export var numShots: int
+
 func _process(_delta: float) -> void:
 	look_at(get_global_mouse_position())
 	
@@ -10,4 +14,9 @@ func shoot() -> void:
 	var new_bullet = BULLET.instantiate()
 	new_bullet.position = marker_2d.global_position
 	new_bullet.target_position = (get_global_mouse_position() - marker_2d.global_position).normalized()
+	
+	numShots += 1
+	shotFired.emit()	
+	
 	get_tree().current_scene.add_child(new_bullet)
+	
