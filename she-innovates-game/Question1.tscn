@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://clfxjtd7hcu1y" path="res://level_select.gd" id="1_lw6ii"]
 [ext_resource type="PackedScene" uid="uid://bui1542cx7gb" path="res://level_icon.tscn" id="2_21myp"]
+[ext_resource type="PackedScene" uid="uid://dg1fbp2hagric" path="res://QuestionTileMap.tscn" id="2_fjuyh"]
 [ext_resource type="PackedScene" uid="uid://3qw1idbs4ow4" path="res://player_icon.tscn" id="3_fjuyh"]
+[ext_resource type="FontFile" uid="uid://4cjrjqopdjnf" path="res://BridgeParapet.ttf" id="3_wa8wm"]
 
 [node name="LevelSelect" type="Control" unique_id=1834330937]
 layout_mode = 3
@@ -13,23 +15,96 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lw6ii")
 
+[node name="TileMapLayer" parent="." unique_id=1855431352 instance=ExtResource("2_fjuyh")]
+position = Vector2(249, 299)
+
+[node name="Label" type="Label" parent="." unique_id=1643262149]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 117.0
+offset_right = 615.0
+offset_bottom = 259.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_wa8wm")
+theme_override_font_sizes/font_size = 30
+text = "Congradulations! You graduated high school!
+But now you must choose a university. "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1811549161]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 365.0
+offset_right = 610.0
+offset_bottom = 507.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_wa8wm")
+theme_override_font_sizes/font_size = 30
+text = "Your parents have promised to contribute
+25K to your college fund, but that won't 
+cover it all."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=773255057]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 108.0
+offset_right = 1196.0
+offset_bottom = 250.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_wa8wm")
+theme_override_font_sizes/font_size = 30
+text = "Private University
+  Pristige: 5/5
+  Cost: 90k per year
+  Financial Aid: 34k"
+
+[node name="Label4" type="Label" parent="." unique_id=293742466]
+layout_mode = 0
+offset_left = 732.0
+offset_top = 282.0
+offset_right = 1206.0
+offset_bottom = 424.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_wa8wm")
+theme_override_font_sizes/font_size = 30
+text = "Public In-State University
+  Pristige: 3/5
+  Cost: 52k per year
+  Financial Aid: 25k"
+
+[node name="Label5" type="Label" parent="." unique_id=1002922189]
+layout_mode = 0
+offset_left = 726.0
+offset_top = 432.0
+offset_right = 1200.0
+offset_bottom = 574.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_wa8wm")
+theme_override_font_sizes/font_size = 30
+text = "Public Out-of-State University
+  Pristige: 3/5
+  Cost: 75k per year
+  Financial Aid: 25k"
+
 [node name="LevelIcon" parent="." unique_id=8457930 node_paths=PackedStringArray("next_level_up", "next_level_down", "next_level_right") instance=ExtResource("2_21myp")]
 layout_mode = 0
-offset_left = 249.0
-offset_top = 299.0
-offset_right = 313.0
-offset_bottom = 364.0
-level_name = "Q1"
+offset_left = 343.0
+offset_top = 307.0
+offset_right = 407.0
+offset_bottom = 372.0
 next_level_up = NodePath("../A")
 next_level_down = NodePath("../C")
 next_level_right = NodePath("../B")
 
 [node name="B" parent="." unique_id=620296854 node_paths=PackedStringArray("next_level_up", "next_level_down", "next_level_left") instance=ExtResource("2_21myp")]
 layout_mode = 0
-offset_left = 482.0
-offset_top = 299.0
-offset_right = 546.0
-offset_bottom = 364.0
+offset_left = 644.0
+offset_top = 304.0
+offset_right = 708.0
+offset_bottom = 369.0
 level_name = "B"
 next_scene_path = "uid://b0wrqlo0r7ohk"
 next_level_up = NodePath("../A")
@@ -38,10 +113,10 @@ next_level_left = NodePath("../LevelIcon")
 
 [node name="C" parent="." unique_id=1867556507 node_paths=PackedStringArray("next_level_up", "next_level_left") instance=ExtResource("2_21myp")]
 layout_mode = 0
-offset_left = 482.0
-offset_top = 473.0
-offset_right = 546.0
-offset_bottom = 538.0
+offset_left = 641.0
+offset_top = 463.0
+offset_right = 705.0
+offset_bottom = 528.0
 level_name = "C"
 next_scene_path = "uid://b0wrqlo0r7ohk"
 next_level_up = NodePath("../B")
@@ -49,10 +124,10 @@ next_level_left = NodePath("../LevelIcon")
 
 [node name="A" parent="." unique_id=1678367899 node_paths=PackedStringArray("next_level_down", "next_level_left") instance=ExtResource("2_21myp")]
 layout_mode = 0
-offset_left = 482.0
-offset_top = 96.0
-offset_right = 546.0
-offset_bottom = 161.0
+offset_left = 639.0
+offset_top = 137.0
+offset_right = 703.0
+offset_bottom = 202.0
 level_name = "A"
 next_scene_path = "uid://b0wrqlo0r7ohk"
 next_level_down = NodePath("../B")
@@ -60,3 +135,7 @@ next_level_left = NodePath("../LevelIcon")
 
 [node name="playerIcon" parent="." unique_id=735402516 instance=ExtResource("3_fjuyh")]
 layout_mode = 0
+offset_left = 94.0
+offset_top = -15.0
+offset_right = 158.0
+offset_bottom = 49.0

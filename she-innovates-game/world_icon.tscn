@@ -1,13 +1,8 @@
 [gd_scene format=3 uid="uid://dof7qrsogol32"]
 
 [ext_resource type="Script" uid="uid://by8w31rxrmx1w" path="res://world_icon.gd" id="1_3s47i"]
-
-[sub_resource type="Gradient" id="Gradient_brorb"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_3s47i"]
-gradient = SubResource("Gradient_brorb")
-width = 64
+[ext_resource type="FontFile" uid="uid://4cjrjqopdjnf" path="res://BridgeParapet.ttf" id="2_npq0c"]
+[ext_resource type="Texture2D" uid="uid://dfdcxd6f4dmms" path="res://Button/tile_0549.png" id="2_x23xf"]
 
 [node name="World Icon" type="Control" unique_id=224312516]
 layout_mode = 3
@@ -18,9 +13,13 @@ script = ExtResource("1_3s47i")
 
 [node name="Label" type="Label" parent="." unique_id=774802569]
 layout_mode = 0
-offset_left = 4.0
-offset_top = -23.0
-offset_right = 58.0
+offset_left = -5.0
+offset_top = 61.0
+offset_right = 61.0
+offset_bottom = 87.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_npq0c")
+theme_override_font_sizes/font_size = 30
 text = "Level 1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -29,5 +28,5 @@ vertical_alignment = 1
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 65.0
-texture = SubResource("GradientTexture1D_3s47i")
+texture = ExtResource("2_x23xf")
 expand_mode = 4

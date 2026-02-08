@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bj4i8y18k6xdw"]
+
+[ext_resource type="FontFile" uid="uid://4cjrjqopdjnf" path="res://BridgeParapet.ttf" id="1_aohfb"]
+
+[node name="text" type="Label" unique_id=339571759]
+offset_left = 141.0
+offset_top = 117.0
+offset_right = 615.0
+offset_bottom = 259.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_aohfb")
+theme_override_font_sizes/font_size = 30
+text = "text"
+horizontal_alignment = 1
+vertical_alignment = 1

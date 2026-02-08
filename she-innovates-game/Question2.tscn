@@ -1,8 +1,10 @@
-[gd_scene format=3 uid="uid://sbv16uw6kb03"]
+[gd_scene format=4 uid="uid://sbv16uw6kb03"]
 
 [ext_resource type="Script" uid="uid://clfxjtd7hcu1y" path="res://level_select.gd" id="1_7n8th"]
+[ext_resource type="PackedScene" uid="uid://dg1fbp2hagric" path="res://QuestionTileMap.tscn" id="2_0ifcx"]
 [ext_resource type="PackedScene" uid="uid://bui1542cx7gb" path="res://level_icon.tscn" id="2_266t6"]
 [ext_resource type="PackedScene" uid="uid://3qw1idbs4ow4" path="res://player_icon.tscn" id="3_0ifcx"]
+[ext_resource type="PackedScene" uid="uid://bj4i8y18k6xdw" path="res://text.tscn" id="3_teabj"]
 
 [node name="LevelSelect" type="Control" unique_id=1834330937]
 layout_mode = 3
@@ -13,46 +15,77 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7n8th")
 
+[node name="TileMapLayer" parent="." unique_id=1855431352 instance=ExtResource("2_0ifcx")]
+position = Vector2(244, 281)
+tile_map_data = PackedByteArray("AAD//wIAAAABAAsAAAAAAAIAAAABAAsAAAD7//r/AAABAA0AAAD7//v/AAABAA0AAAD7//z/AAABAAwAADD7//3/AAABAAsAAAD7//7/AAABAAsAAAD7////AAABAAsAAAD7/wAAAAABAAsAAAD7/wEAAAABAAsAAAD7/wIAAAABAAsAAAD7/wMAAAABAAsAAAD7/wQAAAABAAwAAAD7/wUAAAABAA0AAAD8//r/AAABAA0AAAD8//v/AAABAA0AAAD8//z/AAABAAwAADD8//3/AAABAAsAAAD8//7/AAABAAsAAAD8////AAABAAsAAAD8/wAAAAABAAsAAAD8/wEAAAABAAsAAAD8/wIAAAABAAsAAAD8/wMAAAABAAsAAAD8/wQAAAABAAwAAAD8/wUAAAABAA0AAAD9//r/AAABAA0AAAD9//v/AAABAA0AAAD9//z/AAABAAwAADD9//3/AAABAAsAAAD9//7/AAABAAsAAAD9////AAABAAsAAAD9/wAAAAABAAsAAAD9/wEAAAABAAsAAAD9/wIAAAABAAsAAAD9/wMAAAABAAsAAAD9/wQAAAABAAwAAAD9/wUAAAABAA0AAAD+//r/AAABAA0AAAD+//v/AAABAA0AAAD+//z/AAABAAwAADD+//3/AAABAAsAAAD+//7/AAABAAsAAAD+////AAABAAsAAAD+/wAAAAABAAsAAAD+/wEAAAABAAsAAAD+/wIAAAABAAsAAAD+/wMAAAABAAsAAAD+/wQAAAABAAwAAAD+/wUAAAABAA0AAAD///r/AAABAA0AAAD///v/AAABAA0AAAD///z/AAABAAwAADD///3/AAABAAsAAAD///7/AAABAAsAAAD/////AAABAAsAAAD//wAAAAABAAsAAAD//wEAAAABAAsAAAD//wMAAAABAAsAAAD//wQAAAABAAwAAAD//wUAAAABAA0AAAAAAPr/AAABAA0AAAAAAPv/AAABAA0AAAAAAPz/AAABAAwAADAAAP3/AAABAAsAAAAAAP7/AAABAAsAAAAAAP//AAABAAsAAAAAAAAAAAABAAsAAAAAAAEAAAABAAsAAAAAAAMAAAABAAsAAAAAAAQAAAABAAwAAAAAAAUAAAABAA0AAAABAPr/AAABAA0AAAABAPv/AAABAA0AAAABAPz/AAABAAwAADABAP3/AAABAAsAAAABAP7/AAABAAsAAAABAP//AAABAAsAAAABAAAAAAABAAsAAAABAAEAAAABAAsAAAABAAIAAAABAAsAAAABAAMAAAABAAsAAAABAAQAAAABAAwAAAABAAUAAAABAA0AAAACAPv/AAABAA0AAAACAPz/AAABAAwAADACAP3/AAABAAsAAAACAP7/AAABAAsAAAACAP//AAABAAsAAAACAAAAAAABAAsAAAACAAEAAAABAAsAAAACAAIAAAABAAsAAAACAAMAAAABAAsAAAACAAQAAAABAAwAAAACAAUAAAABAA0AAAADAPr/AAABAA0AAAADAPv/AAABAA0AAAADAPz/AAABAAwAADADAP3/AAABAAsAAAADAP7/AAABAAsAAAADAP//AAABAAsAAAADAAAAAAABAAsAAAADAAEAAAABAAsAAAADAAIAAAABAAsAAAADAAMAAAABAAsAAAADAAQAAAABAAwAAAADAAUAAAABAA0AAAAEAPr/AAABAA0AAAAEAPv/AAABAA0AAAAEAPz/AAABAAwAADAEAP3/AAABAAsAAAAEAP7/AAABAAsAAAAEAP//AAABAAsAAAAEAAAAAAABAAsAAAAEAAEAAAABAAsAAAAEAAIAAAABAAsAAAAEAAMAAAABAAsAAAAEAAQAAAABAAwAAAAEAAUAAAABAA0AAAAFAPr/AAABAA0AAAAFAPv/AAABAA0AAAAFAPz/AAABAAwAADAFAP3/AAABAAsAAAAFAP7/AAABAAsAAAAFAP//AAABAAsAAAAFAAAAAAABAAsAAAAFAAEAAAABAAsAAAAFAAIAAAABAAsAAAAFAAMAAAABAAsAAAAFAAQAAAABAAwAAAAFAAUAAAABAA0AAAAGAPr/AAABAA0AAAAGAPv/AAABAA0AAAAGAPz/AAABAAwAADAGAP3/AAABAAsAAAAGAP7/AAABAAsAAAAGAP//AAABAAsAAAAGAAAAAAABAAsAAAAGAAEAAAABAAsAAAAGAAIAAAABAAsAAAAGAAMAAAABAAsAAAAGAAQAAAABAAwAAAAGAAUAAAABAA0AAAAHAPr/AAABAA0AAAAHAPv/AAABAA0AAAAHAPz/AAABAAwAADAHAP3/AAABAAsAAAAHAP7/AAABAAsAAAAHAP//AAABAAsAAAAHAAAAAAABAAsAAAAHAAEAAAABAAsAAAAHAAIAAAABAAsAAAAHAAMAAAABAAsAAAAHAAQAAAABAAwAAAAHAAUAAAABAA0AAAAIAPr/AAABAA0AAAAIAPv/AAABAA0AAAAIAPz/AAABAAwAADAIAP3/AAABAAsAAAAIAP7/AAABAAsAAAAIAP//AAABAAsAAAAIAAAAAAABAAsAAAAIAAEAAAABAAsAAAAIAAIAAAABAAsAAAAIAAMAAAABAAsAAAAIAAQAAAABAAwAAAAIAAUAAAABAA0AAAAJAPr/AAABAA0AAAAJAPv/AAABAA0AAAAJAPz/AAABAAwAADAJAP3/AAABAAsAAAAJAP//AAABAAsAAAAJAAAAAAABAAsAAAAJAAEAAAABAAsAAAAJAAIAAAABAAsAAAAJAAMAAAABAAsAAAAJAAQAAAABAAwAAAAJAAUAAAABAA0AAAAKAPr/AAABAA0AAAAKAPv/AAABAA0AAAAKAPz/AAABAAwAADAKAP3/AAABAAsAAAAKAP7/AAABAAsAAAAKAP//AAABAAsAAAAKAAAAAAABAAsAAAAKAAEAAAABAAsAAAAKAAIAAAABAAsAAAAKAAMAAAABAAsAAAAKAAQAAAABAAwAAAAKAAUAAAABAA0AAAALAPr/AAABAA0AAAALAPv/AAABAA0AAAALAPz/AAABAAwAADALAP3/AAABAAsAAAALAP7/AAABAAsAAAALAP//AAABAAsAAAALAAAAAAABAAsAAAALAAEAAAABAAsAAAALAAIAAAABAAsAAAALAAMAAAABAAsAAAALAAQAAAABAAwAAAALAAUAAAABAA0AAAAMAPr/AAABAA0AAAAMAPv/AAABAA0AAAAMAPz/AAABAAwAADAMAP3/AAABAAsAAAAMAP7/AAABAAsAAAAMAP//AAABAAsAAAAMAAAAAAABAAsAAAAMAAEAAAABAAsAAAAMAAIAAAABAAsAAAAMAAMAAAABAAsAAAAMAAQAAAABAAwAAAAMAAUAAAABAA0AAAANAPr/AAABAA0AAAANAPv/AAABAA0AAAANAPz/AAABAAwAADANAP3/AAABAAsAAAANAP7/AAABAAsAAAANAP//AAABAAsAAAANAAAAAAABAAsAAAANAAEAAAABAAsAAAANAAIAAAABAAsAAAANAAMAAAABAAsAAAANAAQAAAABAAwAAAANAAUAAAABAA0AAAAOAPr/AAABAA0AAAAOAPv/AAABAA0AAAAOAPz/AAABAAwAADAOAP3/AAABAAsAAAAOAP7/AAABAAsAAAAOAP//AAABAAsAAAAOAAAAAAABAAsAAAAOAAEAAAABAAsAAAAOAAIAAAABAAsAAAAOAAMAAAABAAsAAAAOAAQAAAABAAwAAAAOAAUAAAABAA0AAAD7/wYAAAABAA0AAAD8/wYAAAABAA0AAAD9/wYAAAABAA0AAAD+/wYAAAABAA0AAAD//wYAAAABAA0AAAAAAAYAAAABAA0AAAABAAYAAAABAA0AAAACAAYAAAABAA0AAAADAAYAAAABAA0AAAAEAAYAAAABAA0AAAAFAAYAAAABAA0AAAAGAAYAAAABAA0AAAAHAAYAAAABAA0AAAAIAAYAAAABAA0AAAAJAAYAAAABAA0AAAAKAAYAAAABAA0AAAALAAYAAAABAA0AAAAMAAYAAAABAA0AAAANAAYAAAABAA0AAAAOAAYAAAABAA0AAAAJAP7/AAABAAsAAAACAPr/AAABAA0AAAA=")
+
+[node name="text" parent="." unique_id=339571759 instance=ExtResource("3_teabj")]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 131.0
+offset_right = 470.0
+offset_bottom = 273.0
+text = "While you need to study, you also
+need money"
+
+[node name="text3" parent="." unique_id=569334521 instance=ExtResource("3_teabj")]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 130.0
+offset_right = 1061.0
+offset_bottom = 272.0
+text = "Get a job! At $15 per hour, you can definitely 
+get a good boost in funds, but it will take 
+attention away from your studies."
+horizontal_alignment = 0
+
+[node name="text4" parent="." unique_id=749472034 instance=ExtResource("3_teabj")]
+layout_mode = 0
+offset_left = 589.0
+offset_top = 334.0
+offset_right = 1052.0
+offset_bottom = 476.0
+text = "Focus on studying! You may not be
+working, but applying to a few scholarships
+can help make up for it"
+horizontal_alignment = 0
+
+[node name="text2" parent="." unique_id=1165062253 instance=ExtResource("3_teabj")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 339.0
+offset_right = 477.0
+offset_bottom = 481.0
+text = "Should you pick up a partime job?"
+
 [node name="LevelIcon" parent="." unique_id=8457930 node_paths=PackedStringArray("next_level_up", "next_level_down", "next_level_right") instance=ExtResource("2_266t6")]
 layout_mode = 0
 offset_left = 249.0
 offset_top = 299.0
 offset_right = 313.0
 offset_bottom = 364.0
-level_name = "Q2"
 next_level_up = NodePath("../A")
-next_level_down = NodePath("../C")
+next_level_down = NodePath("../B")
 next_level_right = NodePath("../B")
 
 [node name="B" parent="." unique_id=620296854 node_paths=PackedStringArray("next_level_up", "next_level_down", "next_level_left") instance=ExtResource("2_266t6")]
 layout_mode = 0
-offset_left = 482.0
-offset_top = 299.0
-offset_right = 546.0
-offset_bottom = 364.0
+offset_left = 508.0
+offset_top = 361.0
+offset_right = 572.0
+offset_bottom = 426.0
 level_name = "B"
 next_scene_path = "uid://b0wrqlo0r7ohk"
 next_level_up = NodePath("../A")
-next_level_down = NodePath("../C")
-next_level_left = NodePath("../LevelIcon")
-
-[node name="C" parent="." unique_id=1867556507 node_paths=PackedStringArray("next_level_up", "next_level_left") instance=ExtResource("2_266t6")]
-layout_mode = 0
-offset_left = 482.0
-offset_top = 473.0
-offset_right = 546.0
-offset_bottom = 538.0
-level_name = "C"
-next_scene_path = "uid://b0wrqlo0r7ohk"
-next_level_up = NodePath("../B")
+next_level_down = NodePath("")
 next_level_left = NodePath("../LevelIcon")
 
 [node name="A" parent="." unique_id=1678367899 node_paths=PackedStringArray("next_level_down", "next_level_left") instance=ExtResource("2_266t6")]
 layout_mode = 0
-offset_left = 482.0
-offset_top = 96.0
-offset_right = 546.0
-offset_bottom = 161.0
+offset_left = 511.0
+offset_top = 157.0
+offset_right = 575.0
+offset_bottom = 222.0
 level_name = "A"
 next_scene_path = "uid://b0wrqlo0r7ohk"
 next_level_down = NodePath("../B")
@@ -60,3 +93,7 @@ next_level_left = NodePath("../LevelIcon")
 
 [node name="playerIcon" parent="." unique_id=735402516 instance=ExtResource("3_0ifcx")]
 layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0

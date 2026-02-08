@@ -7,9 +7,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Label.text = "Q " + str(world_index+1)
+	$Label.text = "Question " + str(world_index+1)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Engine.is_editor_hint():
-		$Label.text = "Q " + str(world_index+1)
+		$Label.text = "Question " + str(world_index+1)
