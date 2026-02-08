@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://7g5vw3fw6i0m" path="res://Question1.tscn" id="4_otbh0"]
 [ext_resource type="PackedScene" uid="uid://k3a1ot12lifs" path="res://Question3.tscn" id="5_d6fm2"]
 [ext_resource type="Texture2D" uid="uid://db3x2llp00wyh" path="res://world_tileset.png" id="7_d6fm2"]
+[ext_resource type="FontFile" uid="uid://4cjrjqopdjnf" path="res://BridgeParapet.ttf" id="9_r26gm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r26gm"]
 texture = ExtResource("7_d6fm2")
@@ -142,6 +143,9 @@ texture = ExtResource("7_d6fm2")
 [sub_resource type="TileSet" id="TileSet_qy6nl"]
 sources/0 = SubResource("TileSetAtlasSource_r26gm")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qy6nl"]
+bg_color = Color(0.79367536, 0.5427089, 0.14223129, 1)
+
 [node name="WorldSelect" type="Control" unique_id=578493423]
 layout_mode = 3
 anchors_preset = 0
@@ -189,3 +193,50 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 64.0
 offset_bottom = 64.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=68621924]
+
+[node name="DebtTracker" type="Panel" parent="CanvasLayer" unique_id=1027327141]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -135.0
+offset_right = 541.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qy6nl")
+
+[node name="Label" type="Label" parent="CanvasLayer/DebtTracker" unique_id=1912374069]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 36.0
+offset_right = 284.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("9_r26gm")
+theme_override_font_sizes/font_size = 50
+text = "CURRENT DEBT: "
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/DebtTracker" unique_id=171036442]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 18.0
+offset_right = 498.0
+offset_bottom = 100.0
+
+[node name="amountLabel" type="Label" parent="CanvasLayer/DebtTracker/Panel2" unique_id=1725561177]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_r26gm")
+theme_override_font_sizes/font_size = 70
+text = "$XXK"

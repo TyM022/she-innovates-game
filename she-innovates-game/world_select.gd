@@ -3,8 +3,14 @@ extends Control
 @onready var worlds: Array = [$"World Icon", $"World Icon2", $"World Icon3"]
 var current_world: int = 0
 
+# for debt tracker
+@onready var debtTracker = $CanvasLayer/DebtTracker/Panel2/amountLabel
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# update debt amount wheneber it loads
+	debtTracker.text = "$" + str(DebtAutoloader.curDebt)
+	
 	$playerIcon.global_position = worlds[current_world].global_position
 	
 func _input(event):

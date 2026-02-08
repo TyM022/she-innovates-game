@@ -17,6 +17,8 @@ func shoot() -> void:
 	
 	numShots += 1
 	shotFired.emit()	
-	
+	#TEST PRINT
+	print("Total shots: ", numShots)
+
 	get_tree().current_scene.add_child(new_bullet)
 	
