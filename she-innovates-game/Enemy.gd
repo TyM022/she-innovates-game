@@ -14,7 +14,11 @@ extends CharacterBody2D
 #@export var hitCount: int
 #signal moneySpent
 
+## for level completion signaling
+signal enemyDefeat
+
 func _ready() -> void:
+	add_to_group("enemies")
 	connect_signals()
 	update_animation()
 
@@ -60,4 +64,8 @@ func decrease_life_points(body : Node2D) -> void:
 
 func healthbar_changed(value : float) -> void:
 	if value == 0:
+		
+		# send signal for enemy defeat
+		enemyDefeat.emit()
+		
 		queue_free()

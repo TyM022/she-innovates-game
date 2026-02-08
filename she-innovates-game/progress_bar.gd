@@ -7,6 +7,9 @@ var startMoney = 200
 
 @onready var gun: Node = $"../../Player/Gun"
 
+# for completion message
+@onready var complete
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	max_value = startMoney
@@ -27,4 +30,6 @@ func update():
 	#if enemy:
 		## reset enemy hit count for new levels?
 		#enemy.hitCount = 0
-	print("Shots: ", gun.numShots, " Value: ", value)
+# to access leftover value for completion message
+func _get_value():
+	return value
