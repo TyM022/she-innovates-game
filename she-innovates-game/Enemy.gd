@@ -10,14 +10,21 @@ extends CharacterBody2D
 @export var next_path_position : Vector2
 @export var new_velocity : Vector2
 
+## for progress bar
+#@export var hitCount: int
+#signal moneySpent
+
 func _ready() -> void:
 	connect_signals()
 	update_animation()
 
-func _process(delta: float) -> void:
-	move_enemy(delta)
+func _process(_delta: float) -> void: 
+	move_enemy(_delta) 
 
 func move_enemy(delta : float) -> void:
+	if not GlobalData.player or not is_instance_valid(GlobalData.player):
+		return
+	
 	navigation_agent_2d.set_target_position(GlobalData.player.get_global_position())
 	if global_position.distance_to(GlobalData.player.get_global_position()) >= 16:
 		movement_delta = 50 * delta
@@ -47,6 +54,8 @@ func connect_signals() -> void:
 func decrease_life_points(body : Node2D) -> void:
 	if body is Bullet:
 		texture_progress_bar.value -= 1
+		#hitCount += 1
+		#moneySpent.emit()
 		body.queue_free()
 
 func healthbar_changed(value : float) -> void:

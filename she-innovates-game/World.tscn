@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://lpskcyvqepfg" path="res://Enemy2.tscn" id="5_eu7l1"]
 [ext_resource type="PackedScene" uid="uid://c82lwiu2cw5sk" path="res://Enemy3.tscn" id="6_p1v5b"]
 [ext_resource type="PackedScene" uid="uid://eymvbjovh2c0" path="res://BossSlime.tscn" id="7_wygdx"]
+[ext_resource type="Texture2D" uid="uid://bvn2bbbextthh" path="res://vecteezy_game-coin-pixelated_54978935.png" id="8_bah7m"]
+[ext_resource type="Script" uid="uid://bn0cgp85r7xwb" path="res://progress_bar.gd" id="9_fv4w7"]
+[ext_resource type="Texture2D" uid="uid://dm82hl317i3hu" path="res://healthbarUnder.png" id="9_kva58"]
+[ext_resource type="Texture2D" uid="uid://ye0l21j256pd" path="res://healthbarProgress.png" id="10_f5c0m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_js7pq"]
 texture = ExtResource("1_2dftf")
@@ -256,3 +260,23 @@ position = Vector2(370, 214)
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1723860582]
 position = Vector2(-20, 17)
 navigation_polygon = SubResource("NavigationPolygon_js7pq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1724147922]
+process_mode = 3
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=140929689]
+offset_left = 96.00001
+offset_top = 72.0
+offset_right = 160.32858
+offset_bottom = 82.525085
+scale = Vector2(7, 4)
+max_value = 200.0
+value = 200.0
+texture_under = ExtResource("9_kva58")
+texture_progress = ExtResource("10_f5c0m")
+script = ExtResource("9_fv4w7")
+
+[node name="VecteezyGameCoinPixelated54978935" type="Sprite2D" parent="CanvasLayer" unique_id=428140792]
+position = Vector2(79.99999, 88.00001)
+scale = Vector2(0.018630954, 0.018743383)
+texture = ExtResource("8_bah7m")
