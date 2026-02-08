@@ -1,9 +1,20 @@
 [gd_scene format=3 uid="uid://3qw1idbs4ow4"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_mj6du"]
+[ext_resource type="Texture2D" uid="uid://b7arpne43uu76" path="res://Button/tile_0579.png" id="1_lbs38"]
 
-[node name="playerIcon" type="TextureRect" unique_id=735402516]
-offset_right = 64.0
-offset_bottom = 64.0
+[node name="playerIcon" type="Control" unique_id=1797551688]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 63.0
+offset_bottom = 65.0
 pivot_offset = Vector2(32, 32)
-texture = SubResource("CanvasTexture_mj6du")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=687976718]
+layout_mode = 0
+offset_left = 17.0
+offset_top = -42.0
+offset_right = 57.0
+offset_bottom = -2.0
+texture = ExtResource("1_lbs38")
